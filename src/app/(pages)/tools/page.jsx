@@ -5,8 +5,8 @@ import { useSnapshot } from 'valtio'
 import state from '../store'
 import { reader } from '../../config/helpers'
 import { EditorTabs, FilterTabs, DecalTypes } from '../../config/constants'
-import { slideAnimation } from '../../config/motion'
-import { ColorPicker, FilePicker, Tab } from '../../_components'
+import { fadeAnimation, slideAnimation } from '../../config/motion'
+import { ColorPicker, FilePicker, Tab, CustomButton } from '../../_components'
 import { downloadCanvasToImage } from '../../config/helpers';
 
 const Customizer = () => {
@@ -73,6 +73,10 @@ const Customizer = () => {
     }
   }
 
+  const toggleModel = () => {
+    state.isSecondModelActive = !state.isSecondModelActive
+  }
+
   return (
     <AnimatePresence>
       {!snap.intro && (
@@ -103,7 +107,15 @@ const Customizer = () => {
                 handleClick={() => handleActiveFilterTab(tab.name)}
               />
             ))}
-            <button onClick={downloadCanvasToImage}>Download Image</button>
+             <motion.div
+            className="absolute z-10 top-5 right-5"
+            {...fadeAnimation}
+          >
+           <button onClick={toggleModel} className="w-fit px-4 py-2.5 font-bold text-sm">
+                  Switch Model
+                </button> 
+          </motion.div>
+            <button onClick={downloadCanvasToImage}>Download</button>
           </motion.div>
         </>
       )}
