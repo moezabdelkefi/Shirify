@@ -7,11 +7,12 @@ const policies = {
     'https://checkout.stripe.com',
     'https://js.stripe.com',
     'https://maps.googleapis.com',
+    'http://localhost:3001',
   ],
   'child-src': ["'self'"],
   'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
-  'img-src': ["'self'", 'https://*.stripe.com', 'https://raw.githubusercontent.com'],
-  'font-src': ["'self'"],
+  'img-src': ["'self'", 'data:', 'https://*.stripe.com', 'https://raw.githubusercontent.com'],
+  'font-src': ["'self'", 'https://fonts.gstatic.com'],
   'frame-src': [
     "'self'",
     'https://checkout.stripe.com',
@@ -20,9 +21,11 @@ const policies = {
   ],
   'connect-src': [
     "'self'",
+    'blob:',
     'https://checkout.stripe.com',
     'https://api.stripe.com',
     'https://maps.googleapis.com',
+    'http://localhost:3001',
   ],
 }
 

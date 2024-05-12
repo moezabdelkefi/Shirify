@@ -24,13 +24,19 @@
       }
     ],
     "paths": {
-      "react": ["./node_modules/@types/react"],
+      "react": [
+        "./node_modules/@types/react"
+      ]
     }
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/app/_components/ThreeDModelViewer",
+    "src/app/(pages)/Homecustomize/page.jsx",
+    "src/app/canvas/Shirt.tsx",
+    "src/app/(pages)/customize/page.jsx"
   ],
   "exclude": [
     "node_modules"
