@@ -7,7 +7,7 @@ import { reader } from '../../config/helpers'
 import { EditorTabs, FilterTabs, DecalTypes } from '../../config/constants'
 import { fadeAnimation, slideAnimation } from '../../config/motion'
 import { ColorPicker, FilePicker, Tab, CustomButton } from '../../_components'
-import { downloadCanvasToImage } from '../../config/helpers';
+import { downloadCanvasToImage } from '../../config/helpers'
 
 const Customizer = () => {
   const snap = useSnapshot(state)
@@ -16,6 +16,7 @@ const Customizer = () => {
 
   const [activeEditorTab, setActiveEditorTab] = useState('')
   const [activeFilterTab, setActiveFilterTab] = useState({
+    backShirt: true,
     logoShirt: true,
     stylishShirt: false,
   })
@@ -43,6 +44,9 @@ const Customizer = () => {
 
   const handleActiveFilterTab = tabName => {
     switch (tabName) {
+      case 'backShirt':
+        state.isLogoTexture = !activeFilterTab[tabName]
+        break
       case 'logoShirt':
         state.isLogoTexture = !activeFilterTab[tabName]
         break
@@ -74,9 +78,12 @@ const Customizer = () => {
   }
 
   const toggleModel = () => {
-    state.isSecondModelActive = !state.isSecondModelActive
+    state.currentModel = (state.currentModel + 1) % 3
   }
 
+  const toggleBackVisibility = () => {
+    state.isBackVisible = !state.isBackVisible
+  }
   return (
     <AnimatePresence>
       {!snap.intro && (
@@ -96,7 +103,11 @@ const Customizer = () => {
               </div>
             </div>
           </motion.div>
-
+          <motion.div className="absolute z-10 top-5 right-5" {...fadeAnimation}>
+            <button onClick={toggleModel} className="w-fit px-4 py-2.5 font-bold text-sm">
+              Switch Model
+            </button>
+          </motion.div>
           <motion.div className="filtertabs-container" {...slideAnimation('up')}>
             {FilterTabs.map(tab => (
               <Tab
@@ -107,15 +118,10 @@ const Customizer = () => {
                 handleClick={() => handleActiveFilterTab(tab.name)}
               />
             ))}
-             <motion.div
-            className="absolute z-10 top-5 right-5"
-            {...fadeAnimation}
-          >
-           <button onClick={toggleModel} className="w-fit px-4 py-2.5 font-bold text-sm">
-                  Switch Model
-                </button> 
-          </motion.div>
             <button onClick={downloadCanvasToImage}>Download</button>
+            <button onClick={toggleBackVisibility} className="w-fit px-4 py-2.5 font-bold text-sm">
+              Back Visibility
+            </button>
           </motion.div>
         </>
       )}

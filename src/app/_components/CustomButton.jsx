@@ -8,11 +8,9 @@ const CustomButton = ({ type, title, customStyles, handleClick }) => {
   const snap = useSnapshot(state)
 
   const handleButtonClick = () => {
-    // If the button's title is 'Customize It', toggle the rotation
     if (title === 'Customize It') {
       state.isRotating = !state.isRotating
     }
-    // Call the handleClick function if it exists
     if (handleClick) {
       handleClick()
     }

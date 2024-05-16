@@ -2,6 +2,10 @@
 
 .header {
   padding: var(--base) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgb(255, 255, 255);
 }
 
 .wrap {
@@ -13,10 +17,4 @@
 
 .logo {
   width: 150px;
-}
-
-:global([data-theme="light"]) {
-  .logo {
-    filter: invert(1);
-  }
 }

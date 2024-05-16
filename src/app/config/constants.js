@@ -31,4 +31,8 @@ export const DecalTypes = {
     stateProperty: "fullDecal",
     filterTab: "stylishShirt",
   },
+  back: {
+    stateProperty: "backDecal",
+    filterTab: "backShirt",
+  },
 };

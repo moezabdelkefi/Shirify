@@ -13,10 +13,13 @@ import {
 } from '../../config/motion'
 
 const Home = () => {
+  const toggleBackVisibility = () => {
+    state.isBackVisible = !state.isBackVisible;
+  };
   const snap = useSnapshot(state)
   const toggleModel = () => {
-    state.isSecondModelActive = !state.isSecondModelActive
-  }
+    state.currentModel = (state.currentModel + 1) % 3;
+  };
 
   return (
     <AnimatePresence>
@@ -47,6 +50,9 @@ const Home = () => {
                 />
                 <button onClick={toggleModel} className="w-fit px-4 py-2.5 font-bold text-sm">
                   Switch Model
+                </button>
+                <button onClick={toggleBackVisibility} className="w-fit px-4 py-2.5 font-bold text-sm">
+                  Back Visibility
                 </button>
               </div>
             </motion.div>

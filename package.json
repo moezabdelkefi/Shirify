@@ -50,6 +50,7 @@
     "react-hook-form": "7.45.4",
     "react-router-dom": "5.3.4",
     "react-three-fiber": "^6.0.13",
+    "react-toastify": "^10.0.5",
     "stripe": "^10.2.0",
     "three": "^0.164.1",
     "valtio": "^1.13.2"

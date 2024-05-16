@@ -1,7 +1,17 @@
-import React from 'react'
-import CustomButton from './CustomButton'
+import React from 'react';
+import CustomButton from './CustomButton';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const FilePicker = ({ file, setFile, readFile }) => {
+  const handleUploadClick = (type) => {
+    if (!file) {
+      toast.error('Please select a file before uploading.');
+      return;
+    }
+    readFile(type);
+  };
+
   return (
     <div className="filepicker-container">
       <div className="flex-1 flex flex-col">
@@ -26,18 +36,24 @@ const FilePicker = ({ file, setFile, readFile }) => {
         <CustomButton
           type="outline"
           title="Logo"
-          handleClick={() => readFile('logo')}
+          handleClick={() => handleUploadClick('logo')}
           customStyles="text-xs"
         />
         <CustomButton
           type="filled"
           title="Full"
-          handleClick={() => readFile('full')}
+          handleClick={() => handleUploadClick('full')}
+          customStyles="text-xs"
+        />
+        <CustomButton
+          type="filled"
+          title="Back"
+          handleClick={() => handleUploadClick('back')}
           customStyles="text-xs"
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FilePicker
+export default FilePicker;
