@@ -13,6 +13,7 @@ FROM base as runtime
 
 ENV NODE_ENV=production
 ENV PAYLOAD_CONFIG_PATH=dist/payload.config.js
+ENV PAYLOAD_SECRET=SwD9UmcS9fAz7rOCRrK69WFJ2k1tT0r3sIYVz9a/s8g=
 
 WORKDIR /home/node/app
 COPY package*.json  ./
