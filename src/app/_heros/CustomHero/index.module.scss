@@ -22,7 +22,11 @@
   background-size: cover;
   background-position: revert;
   background-repeat: no-repeat;
+  background-color: var(--color-dark-50);
 
+  :global([data-theme="dark"]) & {
+    background-color: var(--theme-elevation-0);
+  }
   @include small-break {
     background-size: cover;
     background-position: center;
@@ -42,6 +46,9 @@
   padding: 10% var(--gutter-h);
   width: 100%;
   color: #C32CFF;
+  :global([data-theme="dark"]) & {
+    color: #ffcf40;
+  }
 
   @include mid-break {
     padding: 10% 30px;

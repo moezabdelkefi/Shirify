@@ -31,7 +31,6 @@
   text-align: center;
   display: flex;
   align-items: center;
-  color: aliceblue;
 }
 
 .appearance--primary {
@@ -68,6 +67,7 @@
       text-transform: none;
       line-height: inherit;
       font-size: inherit;
+      color: aliceblue;
     }
   }
 }
