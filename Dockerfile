@@ -7,7 +7,8 @@ COPY package*.json ./
 
 COPY . .
 RUN yarn install
-RUN yarn build
+# Add more verbosity to the build command if possible
+RUN yarn build --verbose
 
 FROM base as runtime
 
