@@ -5,11 +5,11 @@ import Link from 'next/link'
 
 import { Header as HeaderType, User } from '../../../../payload/payload-types'
 import { useAuth } from '../../../_providers/Auth'
+import { ThemeSelector } from '../../../_providers/Theme/ThemeSelector'
 import { CartLink } from '../../CartLink'
 import { CMSLink } from '../../Link'
 
 import classes from './index.module.scss'
-import { ThemeSelector } from '../../../_providers/Theme/ThemeSelector'
 
 export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
   const navItems = header?.navItems || []
@@ -30,11 +30,19 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
         return <CMSLink key={i} {...link} appearance="none" />
       })}
       <CartLink />
-      {user && <Link href="/account" className={classes.link}>Account</Link>}
+      {user && (
+        <Link href="/account" className={classes.link}>
+          Account
+        </Link>
+      )}
       {!user && (
         <React.Fragment>
-          <Link href="/login" className={classes.link}>Login</Link>
-          <Link href="/create-account" className={classes.link}>Create Account</Link>
+          <Link href="/login" className={classes.link}>
+            Login
+          </Link>
+          <Link href="/create-account" className={classes.link}>
+            Create Account
+          </Link>
         </React.Fragment>
       )}
       <ThemeSelector />

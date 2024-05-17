@@ -1,14 +1,16 @@
 import React from 'react'
+import Image from 'next/image'
 import { useSnapshot } from 'valtio'
 
-import state from '../(pages)/store';
+import state from '../(pages)/store'
 
 const Tab = ({ tab, isFilterTab, isActiveTab, handleClick }) => {
-  const snap = useSnapshot(state);
+  const snap = useSnapshot(state)
 
-  const activeStyles = isFilterTab && isActiveTab 
-    ? { backgroundColor: snap.color, opacity: 0.5 }
-    : { backgroundColor: "transparent", opacity: 1 }
+  const activeStyles =
+    isFilterTab && isActiveTab
+      ? { backgroundColor: snap.color, opacity: 0.5 }
+      : { backgroundColor: 'transparent', opacity: 1 }
 
   return (
     <div
@@ -17,7 +19,7 @@ const Tab = ({ tab, isFilterTab, isActiveTab, handleClick }) => {
       onClick={handleClick}
       style={activeStyles}
     >
-      <img 
+      <Image
         src={tab.icon}
         alt={tab.name}
         className={`${isFilterTab ? 'w-2/3 h-2/3' : 'w-11/12 h-11/12 object-contain'}`}

@@ -1,14 +1,16 @@
-
-import React, { useState, useEffect } from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useSnapshot } from 'valtio'
 
-import state from '../store'
-import { reader } from '../../config/helpers'
-import { EditorTabs, FilterTabs, DecalTypes } from '../../config/constants'
+import ColorPicker from '../../_components/ColorPicker.jsx'
+import CustomButton from '../../_components/CustomButton.jsx'
+import FilePicker from '../../_components/FilePicker.jsx'
+import Tab from '../../_components/Tab.jsx'
+import { DecalTypes, EditorTabs, FilterTabs } from '../../config/constants'
+import { downloadCanvasToImage, reader } from '../../config/helpers'
 import { fadeAnimation, slideAnimation } from '../../config/motion'
-import { ColorPicker, FilePicker, Tab, CustomButton } from '../../_components'
-import { downloadCanvasToImage } from '../../config/helpers'
+import state from '../store'
 
 const Customizer = () => {
   const snap = useSnapshot(state)
@@ -74,7 +76,8 @@ const Customizer = () => {
       handleDecals(type, result)
       setActiveEditorTab('')
     } catch (error) {
-      console.error('Error reading file:', error)
+      // eslint-disable-next-line no-console
+      console.log('Your console statement here')
     }
   }
 

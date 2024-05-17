@@ -12,9 +12,9 @@ import { Price } from '../../../_components/Price'
 import { RemoveFromCartButton } from '../../../_components/RemoveFromCartButton'
 import { useAuth } from '../../../_providers/Auth'
 import { useCart } from '../../../_providers/Cart'
+import CartItem from './CartItem'
 
 import classes from './index.module.scss'
-import CartItem from './CartItem'
 
 export const CartPage: React.FC<{
   settings: Settings
@@ -64,34 +64,34 @@ export const CartPage: React.FC<{
                     <p></p>
                     <p>Quantity</p>
                   </div>
-                    <p className={classes.headersubtotal}>Subtotal</p>
+                  <p className={classes.headersubtotal}>Subtotal</p>
                 </div>
-              <ul className={classes.itemsList}>
-                {cart?.items?.map((item, index) => {
-                  if (typeof item.product === 'object') {
-                    const {
-                      quantity,
-                      product,
-                      product: { id, title, meta, stripeProductID },
-                    } = item
+                <ul className={classes.itemsList}>
+                  {cart?.items?.map((item, index) => {
+                    if (typeof item.product === 'object') {
+                      const {
+                        quantity,
+                        product,
+                        product: { id, title, meta, stripeProductID },
+                      } = item
 
-                    const isLast = index === (cart?.items?.length || 0) - 1
+                      const isLast = index === (cart?.items?.length || 0) - 1
 
-                    const metaImage = meta?.image
+                      const metaImage = meta?.image
 
-                    return (
-                      <CartItem
-                        product={product}
-                        title={title}
-                        metaImage={metaImage}
-                        qty={quantity}
-                        addItemToCart={addItemToCart}
-                      />
-                    )
-                  }
-                  return null
-                })}
-              </ul>
+                      return (
+                        <CartItem
+                          product={product}
+                          title={title}
+                          metaImage={metaImage}
+                          qty={quantity}
+                          addItemToCart={addItemToCart}
+                        />
+                      )
+                    }
+                    return null
+                  })}
+                </ul>
               </div>
               <div className={classes.summary}>
                 <div className={classes.row}>

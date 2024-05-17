@@ -20,8 +20,7 @@ export default async function CreateAccount() {
 
   return (
     <section className={classes.createAccount}>
-      <div className={classes.heroImg}>
-      </div>
+      <div className={classes.heroImg}></div>
 
       <div className={classes.formWrapper}>
         <div className={classes.formContainer}>

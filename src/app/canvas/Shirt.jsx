@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
-import { useSnapshot } from 'valtio'
+import { Center, Decal, useGLTF, useTexture } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
-import { Decal, useGLTF, useTexture, Center } from '@react-three/drei'
-import state from '../(pages)/store'
 import { easing } from 'maath'
 import * as THREE from 'three'
+import { useSnapshot } from 'valtio'
+
+import state from '../(pages)/store'
 
 const Shirt = () => {
   const snap = useSnapshot(state)
@@ -34,18 +35,17 @@ const Shirt = () => {
       backTexture.offset.x = 1
     }
   }, [backTexture])
-  
 
   const stateString = JSON.stringify(snap)
   const showSecondModel = false
   const firstSecondModel = true
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark')
     return () => {
-      document.documentElement.setAttribute('data-theme', 'light');
-    };
-  }, []);
+      document.documentElement.setAttribute('data-theme', 'light')
+    }
+  }, [])
 
   return (
     <group key={stateString}>

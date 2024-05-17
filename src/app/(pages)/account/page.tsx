@@ -81,9 +81,7 @@ export default async function Account() {
         </div>
         <HR />
         <h2>Orders</h2>
-        <p>
-          
-        </p>
+        <p></p>
         <Button
           className={classes.ordersButton}
           href="/orders"

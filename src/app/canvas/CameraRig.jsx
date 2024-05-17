@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import { easing } from 'maath'
 import { useSnapshot } from 'valtio'
@@ -24,10 +24,10 @@ const CameraRig = ({ children }) => {
     }
 
     const handleMouseMove = event => {
-      if (!isUserInteracting) return;
-      const movementX = event.movementX || event.mozMovementX || event.webkitMovementX || 0;
-      const rotationSpeed = 0.001;
-      group.current.rotation.y += movementX * rotationSpeed;
+      if (!isUserInteracting) return
+      const movementX = event.movementX || event.mozMovementX || event.webkitMovementX || 0
+      const rotationSpeed = 0.001
+      group.current.rotation.y += movementX * rotationSpeed
     }
 
     gl.domElement.addEventListener('mousedown', handleMouseDown)

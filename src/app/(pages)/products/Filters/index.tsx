@@ -1,22 +1,23 @@
 'use client'
 import React from 'react'
-import classes from './index.module.scss'
-import { useFilter } from '../../../_providers/Filter'
-import Categories from '../../../_components/Categories'
+
 import { Category } from '../../../../payload/payload-types'
+import Categories from '../../../_components/Categories'
 import { Checkbox } from '../../../_components/Chekbox'
 import { HR } from '../../../_components/HR'
 import { RadioButton } from '../../../_components/Radio'
+import { useFilter } from '../../../_providers/Filter'
+
+import classes from './index.module.scss'
 
 const Filters = ({ categories }: { categories: Category[] }) => {
-
   const { categoryFilters, setCategoryFilters, sort, setSort } = useFilter()
   const handleCategories = (categoryId: string) => {
-    if(categoryFilters.includes(categoryId)) {
-        const updatedCategories = categoryFilters.filter(id => id !== categoryId)
-        setCategoryFilters(updatedCategories)
-    } else{
-        setCategoryFilters([...categoryFilters, categoryId])
+    if (categoryFilters.includes(categoryId)) {
+      const updatedCategories = categoryFilters.filter(id => id !== categoryId)
+      setCategoryFilters(updatedCategories)
+    } else {
+      setCategoryFilters([...categoryFilters, categoryId])
     }
   }
   const handleSort = (value: string) => setSort(value)

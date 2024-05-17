@@ -17,8 +17,6 @@ import { Orders } from './collections/Orders'
 import { Pages } from './collections/Pages'
 import Products from './collections/Products'
 import Users from './collections/Users'
-import BeforeDashboard from './components/BeforeDashboard'
-import BeforeLogin from './components/BeforeLogin'
 import { createPaymentIntent } from './endpoints/create-payment-intent'
 import { customersProxy } from './endpoints/customers'
 import { productsProxy } from './endpoints/products'
@@ -47,8 +45,7 @@ export default buildConfig({
       titleSuffix: 'Shirtify',
     },
     bundler: webpackBundler(), // bundler-config
-    components: {
-    },
+    components: {},
     webpack: config => {
       return {
         ...config,

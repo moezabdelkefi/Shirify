@@ -1,20 +1,20 @@
 'use client'
 import React, { Suspense } from 'react'
+import { OrbitControls, useAnimations, useFBX } from '@react-three/drei'
 import { Canvas, useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { OrbitControls, useAnimations, useFBX } from '@react-three/drei'
 
 const Model = () => {
   const gltf = useLoader(GLTFLoader, '/media/avatar1.glb')
   const fbx = useFBX('/media/Kneeling.fbx')
-  const { actions } = useAnimations(fbx.animations, gltf.scene);
+  const { actions } = useAnimations(fbx.animations, gltf.scene)
 
   React.useEffect(() => {
-    const actionKeys = Object.keys(actions);
+    const actionKeys = Object.keys(actions)
     if (actionKeys.length > 0 && actions[actionKeys[0]]) {
-      actions[actionKeys[0]].play();
+      actions[actionKeys[0]].play()
     }
-  }, [actions]);
+  }, [actions])
 
   return (
     <>

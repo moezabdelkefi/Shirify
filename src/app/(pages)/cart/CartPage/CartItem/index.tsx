@@ -4,10 +4,11 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import classes from './index.module.scss'
 import { Media } from '../../../../_components/Media'
 import { Price } from '../../../../_components/Price'
 import { RemoveFromCartButton } from '../../../../_components/RemoveFromCartButton'
+
+import classes from './index.module.scss'
 
 const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
   const [quantity, setQuantity] = useState(qty)
@@ -50,7 +51,7 @@ const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
 
         <div className={classes.quantity}>
           <div className={classes.quantityBtn} onClick={decrementQty}>
-            <Image  
+            <Image
               src="/media/icons/minus.svg"
               alt="minus"
               width={24}
@@ -58,9 +59,12 @@ const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
               className={classes.qtnBt}
             />
           </div>
-
-        <input type="text" className={classes.quantityInput} value={quantity} onChange={enterQty} />
-          
+          <input
+            type="text"
+            className={classes.quantityInput}
+            value={quantity}
+            onChange={enterQty}
+          />
           <div className={classes.quantityBtn} onClick={incrementQty}>
             <Image
               src="/media/icons/plus.svg"

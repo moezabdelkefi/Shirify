@@ -1,5 +1,7 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
+
 import classes from './index.module.scss'
 
 const Promotion = () => {
@@ -16,6 +18,7 @@ const Promotion = () => {
   useEffect(() => {
     const timerInterval = setInterval(() => {
       const currentTime = new Date()
+      // Assuming targetDate is defined somewhere in your component
       const timeDifference = Math.max(Number(targetDate) - Number(currentTime), 0)
 
       const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
@@ -33,7 +36,8 @@ const Promotion = () => {
     return () => {
       clearInterval(timerInterval)
     }
-  }, [])
+  }, [targetDate])
+
   return (
     <section className={classes.promotion}>
       <div className={classes.gridContainer}>
@@ -48,8 +52,7 @@ const Promotion = () => {
           </ul>
         </div>
       </div>
-
-      <img src="media/hoodie.jpg" alt="Promotion" className={classes.gridContainer} />
+      <Image src="media/hoodie.jpg" alt="Promotion" className={classes.gridContainer} />
     </section>
   )
 }

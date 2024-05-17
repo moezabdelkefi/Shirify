@@ -1,23 +1,28 @@
 'use client'
-import React from 'react';
-import { Category, Media } from '../../../../payload/payload-types';
-import classes from './index.module.scss';
-import Link from 'next/link';
-import { useFilter } from '../../../_providers/Filter';
+import React from 'react'
+import Link from 'next/link'
+
+import { Category, Media } from '../../../../payload/payload-types'
+import { useFilter } from '../../../_providers/Filter'
+
+import classes from './index.module.scss'
 
 type CategoryCardProps = {
-  category: Category;
-};
+  category: Category
+}
 
 const CategoryCard = ({ category }: CategoryCardProps) => {
-  const media = category.media as Media;
-  const isVideo = media.url.endsWith('.mp4');
-  const {setCategoryFilters } = useFilter();
-
+  const media = category.media as Media
+  const isVideo = media.url.endsWith('.mp4')
+  const { setCategoryFilters } = useFilter()
 
   return (
     <div className={classes.card}>
-      <Link href="/products" className={classes.overlay} onClick={() =>setCategoryFilters([category.id])}>
+      <Link
+        href="/products"
+        className={classes.overlay}
+        onClick={() => setCategoryFilters([category.id])}
+      >
         <p className={classes.title}>{category.title}</p>
       </Link>
       {isVideo ? (
@@ -26,13 +31,10 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
           Your browser does not support the video tag.
         </video>
       ) : (
-        <div
-          className={classes.image}
-          style={{ backgroundImage: `url(${media.url})` }}
-        ></div>
+        <div className={classes.image} style={{ backgroundImage: `url(${media.url})` }}></div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default CategoryCard;
+export default CategoryCard

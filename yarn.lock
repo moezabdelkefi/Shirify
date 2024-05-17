@@ -1853,7 +1853,7 @@
   resolved "https://registry.npmjs.org/@payloadcms/eslint-config/-/eslint-config-0.0.1.tgz"
   integrity sha512-Il59+0C4E/bI6uM2hont3I+oABWkJZbfbItubje5SGMrXkymUq8jT/UZRk0eCt918bB7gihxDXx8guFnR/aNIw==
 
-"@payloadcms/plugin-cloud@^3.0.1":
+"@payloadcms/plugin-cloud@^3.0.0":
   version "3.0.1"
   resolved "https://registry.npmjs.org/@payloadcms/plugin-cloud/-/plugin-cloud-3.0.1.tgz"
   integrity sha512-o0+3C0KDo29nPv7uKMHzdo0hfxdIksKDOg+/U4jH2vh2zkcH7HCbW4M10m2q/FcusHyhr4CtIizuCS5Ck6HDKw==
@@ -4972,7 +4972,7 @@ eslint-visitor-keys@^3.3.0, eslint-visitor-keys@^3.4.1, eslint-visitor-keys@^3.4
   resolved "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-3.4.3.tgz"
   integrity sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==
 
-eslint@*, "eslint@^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8", "eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@^6.0.0 || ^7.0.0 || >=8.0.0", eslint@^8.19.0, "eslint@>= 8.0.0", eslint@>=5.0.0, eslint@>=7.0.0, eslint@>=7.28.0:
+eslint@*, "eslint@^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8", "eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@^6.0.0 || ^7.0.0 || >=8.0.0", eslint@^8.57.0, "eslint@>= 8.0.0", eslint@>=5.0.0, eslint@>=7.0.0, eslint@>=7.28.0:
   version "8.57.0"
   resolved "https://registry.npmjs.org/eslint/-/eslint-8.57.0.tgz"
   integrity sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==

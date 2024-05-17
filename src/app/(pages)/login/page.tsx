@@ -18,9 +18,7 @@ export default async function Login() {
 
   return (
     <section className={classes.login}>
-      <div className={classes.heroImg}>
-      </div>
-
+      <div className={classes.heroImg}></div>
       <div className={classes.formWrapper}>
         <div className={classes.formContainer}>
           <RenderParams className={classes.params} />
@@ -29,9 +27,7 @@ export default async function Login() {
             <h3>Welcome</h3>
             <Image src="/media/icons/hand.png" alt="hand" width={30} height={30} />
           </div>
-
           <p>Please login here</p>
-
           <LoginForm />
         </div>
       </div>
