@@ -1,4 +1,4 @@
-import { fileIcon, logoShirt, stylishShirt, swatch } from '../../../media/assets'
+import { fileIcon, logoShirt, stylishShirt, swatch } from '../../../public/assets'
 
 export const EditorTabs = [
   {
