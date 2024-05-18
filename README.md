@@ -78,6 +78,7 @@ See the [Collections](https://payloadcms.com/docs/configuration/collections)  do
 - #### Orders
 
   Orders are created when a user successfully completes a checkout. They contain all the data about the order including the products purchased, the total price, and the user who placed the order. See [Checkout](#checkout) for more details.
+  
 
 - #### Pages
 
