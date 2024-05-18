@@ -16,10 +16,6 @@ FROM base as runtime
 ENV NODE_ENV=production
 ENV PAYLOAD_CONFIG_PATH=dist/payload.config.js
 
-# Use ARG for build-time variables
-ARG PAYLOAD_SECRET
-ENV PAYLOAD_SECRET=$PAYLOAD_SECRET
-
 WORKDIR /home/node/app
 COPY package*.json ./
 COPY yarn.lock ./
