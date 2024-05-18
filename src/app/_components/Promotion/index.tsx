@@ -52,7 +52,13 @@ const Promotion = () => {
           </ul>
         </div>
       </div>
-      <Image src="media/hoodie.jpg" alt="Promotion" className={classes.gridContainer} />
+      <Image
+        src="/media/hoodie.jpg"
+        alt="Promotion"
+        width={800}
+        height={600}
+        className={classes.gridContainer}
+      />
     </section>
   )
 }
