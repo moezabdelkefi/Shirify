@@ -43,8 +43,6 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
             <Link href="/">
               <Image src="/media/shirtify.png" alt="logo" width={170} height={50} />
             </Link>
-
-            <p>{footer?.copyright}</p>
           </div>
         </Gutter>
       </div>
