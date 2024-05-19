@@ -14,6 +14,7 @@ Shirtify is a dynamic, web-based application designed for customizing shirts wit
 - **Real-time 3D Preview**: Utilize the power of Three.js for a real-time 3D preview of the customized shirts.
 - **Dynamic Content Management**: Powered by Payload CMS, Shirtify allows easy management of shirt models, decals, and other assets.
 - **Responsive Design**: Ensures a seamless experience across all devices.
+- **Advanced Filtration System**: Shirtify includes a comprehensive filter system, allowing users to easily find shirts by categories.
 
 ## Getting Started
 
