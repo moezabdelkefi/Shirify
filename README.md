@@ -30,8 +30,7 @@ To get started with Shirtify, clone the repository to your local machine:
 
 ## Project Structure
 
-
-
+![code](https://github.com/moezabdelkefi/Shirify/assets/113900578/3eac2bd6-eaee-4803-a50c-99e41a8b3149)
 
 ## Technology Stack
 
