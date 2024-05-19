@@ -20,6 +20,13 @@ Shirtify is a dynamic, web-based application designed for customizing shirts wit
 
 To get started with Shirtify, clone the repository to your local machine:
 
+## Exemple of 3dModel:
+
+
+
+https://github.com/moezabdelkefi/Shirify/assets/113900578/2c7b1c19-3c5f-4074-b4e8-8f0949c7a9fb
+
+
 
 ## Technology Stack
 
