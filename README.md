@@ -46,7 +46,7 @@ Frontend: typescript, React, Three.js for 3D rendering
 
 Backend: Payload CMS for content management
 
-Database: MongoDB (assumed based on Payload CMS)
+Database: MongoDB
 
 Deployment: Docker for containerization and easy deployment
 
