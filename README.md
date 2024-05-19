@@ -1,4 +1,10 @@
-# Shirtify
+<h1 align="center">Shirtify</h1>
+
+
+
+https://github.com/moezabdelkefi/Shirify/assets/113900578/3cb2ea1e-4398-4058-b20f-757fac862c66
+
+
 
 Shirtify is a dynamic, web-based application designed for customizing shirts with decals, colors, and various designs. Leveraging the power of Payload CMS, React, and Three.js, Shirtify offers an intuitive interface for users to create personalized shirt designs effortlessly.
 
