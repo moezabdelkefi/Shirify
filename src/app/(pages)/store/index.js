@@ -9,7 +9,7 @@ const state = proxy({
   isBackTexture: true,
   logoDecal: '/media/backimg.png',
   backDecal: '/media/backimg.png',
-  fullDecal: '/threejs.png',
+  fullDecal: '/media/backimg.png',
   isRotating: true,
   isSecondModelActive: false,
   currentModel: 0,
