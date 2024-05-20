@@ -30,25 +30,18 @@ https://github.com/moezabdelkefi/Shirify/assets/113900578/2c7b1c19-3c5f-4074-b4e
 
 ## Technology Stack
 
-- **Frontend**: React.js for building the user interface.
-- **Backend**: Node.js with Express.js server.
-- **CMS**: Payload CMS for content management.
-- **3D Rendering**: Three.js for real-time 3D preview of shirts.
-- **Styling**: Tailwind CSS for responsive design.
+- **Frontend**: typescript, React, Three.js for 3D rendering, Tailwind CSS, Sass
+
+- **Backend**: Payload CMS for content management, Node.js with Express.js server, Next.js, Stripe
+
+- **Database**: MongoDB
+
+- **Deployment**: Docker for containerization and easy deployment
 
 ## Project Structure
 
 ![code](https://github.com/moezabdelkefi/Shirify/assets/113900578/3eac2bd6-eaee-4803-a50c-99e41a8b3149)
 
-## Technology Stack
-
-Frontend: typescript, React, Three.js for 3D rendering
-
-Backend: Payload CMS for content management
-
-Database: MongoDB
-
-Deployment: Docker for containerization and easy deployment
 
 
 ## License:
