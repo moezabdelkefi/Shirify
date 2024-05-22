@@ -5,6 +5,7 @@
   grid-template-columns: 1fr 45%;
   height: 100vh;
   overflow: auto;
+  overflow: hidden;
 
   @include mid-break {
     grid-template-columns: 1fr;
